@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      margin: 0;
+      background-color: #f3ebe4;
+    }
+    header {
+      width: 500px;
+      margin: 250px auto 10px;
+      background-color: white;
+      border-radius: 9px;
+      overflow: hidden;
+      box-shadow: 1px 1px 8px 0px #dfc5c5;
+    }
+    @media (max-width: 767px) {
+      header {
+        width: 250px;
+      }
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2 , 1fr);
+    }
+    @media (max-width: 767px) {
+      .container {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2 , 1fr);
+      }
+    }
+    .container .image img {
+      max-width: 250px;
+      height: 100%;
+    }
+    .container .text {
+      padding: 0px 23px 20px;
+      position: relative;
+    }
+    .container .text h4 {
+      font-weight: 100;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #777;
+      padding-left: 5px;
+    }
+    .container .text del {
+      font-weight: 600;
+      font-size: 9px;
+      color: #777;
+    }
+    .container .text h1 {
+      margin: 0;
+      font-size: 33px;
+      line-height: 0.9;
+    }
+    .container .text p {
+      line-height: 1.5;
+      color: #777;
+      font-size: 15px;
+    }
+    .container .text .price {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+    .container .text .price h3 {
+      font-size: 30px;
+      margin: 10px 0;
+      color: #3d8168;
+    }
+    .container .text button {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translate(-50% , 50%);
+      width: calc(100% - 46px);
+      padding: 10px;
+      border: 1px solid;
+      border-radius: 8px;
+      background-color: #3d8168;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+
+    }
+    .container .text button:hover {
+      background-color: #2a5847;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="image">
+        <img src="./images/image-product-desktop.jpg" alt="">
+      </div>
+      <div class="text">
+        <h4>PERFUME</h4>
+        <h1>Gabrielle Essence Eau De Parfum</h1> 
+        <p>  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.</p>
+            <div class="price">
+              <h3>$149.99</h3>
+              <del>$169.99</del> 
+            </div>
+          <button>Add to Cart</button>
+      </div>
+    </div>
+  </header>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.facebook.com/abdoismael0">Bodda</a>.
+  </div>
+</body>
+</html>
